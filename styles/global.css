@@ -13,23 +13,11 @@
   --text-color-primary:#313131;
   --text-color-secondary:#6C6C6C;
 
-  --text-lg-size:32px;
-  --text-normal-size:16px;
-  --text-md-size:14px;
-  --text-sm-size:12px;
-  
-  --text--lg-weigth-bold:bold;
-  --text-normal-weigth-regular:normal;
-  --text-md-weigth-regular:normal;
-  --text-sm-weigth-regular:normal;
-  
-  
-  --text-lg-line-height:125%;
-  --text-normal-line-height:150%;
-  --text-md-line-height:170%;
-  --text-sm-line-height:170%;
-  
   --font-family: "Poppins", sans-serif;
+  --text-lg: bold 32px/125% var(--font-family);
+  --text-normal: normal 16px/150% var(--font-family);
+  --text-md: normal 14px/175% var(--font-family);
+  --text-sm: normal 12px/175% var(--font-family);
 }
 
 body{
@@ -37,10 +25,31 @@ body{
   font-weight: var(--text-weigth-lg-bold);
   line-height: var(--text-lg-line-height);
   font-family: var(--font-family); */
-
+  font: var(--text-normal);
   color: var(--text-color-secondary);
   background-color: var(--background-color);
 }
 
 
+a {
+text-decoration: none;
+color: inherit; /* esse inherit vai pegar a cor do pai dele, que é o body*/
+flex-wrap: wrap;
+}
 
+a:hover{
+  color: var(--brand-color);
+  text-decoration: underline;
+}
+
+
+
+.container{
+  padding-inline:32px; /*so serve pras laterais e nao vai colocar em cima nem em baixo*/
+  max-width: 1280px;
+  margin-inline: auto; /*so serve pras laterais e nao vai colocar em cima nem em baixo vai centralizar ao meio*/
+}
+
+.bg-surface-color{
+  background-color: var(--surface-color);
+}
