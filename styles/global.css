@@ -56,3 +56,8 @@ a:hover {
 .bg-surface-color {
   background-color: var(--surface-color);
 }
+
+
+footer{
+  font: 14px/150% var(--font-family);
+}
